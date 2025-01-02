@@ -1,6 +1,6 @@
 {
-    "name": "spt-id-highlighter",
-    "displayName": "SPT ID Highlighter",
+    "name": "spt-id-highlighter-yurikus",
+    "displayName": "SPT ID Highlighter/yurikus",
     "description": "This extension aids in the development of the Single Player Tarkov project by providing additional information about items, quests, and other game objects all directly within Visual Studio Code. ",
     "icon": "images/icon.png",
     "author": "Refringe <me@refringe.com>",
@@ -41,49 +41,19 @@
                     "default": "en",
                     "description": "Language for item names and descriptions.",
                     "enum": [
-                        "ch",
-                        "cz",
                         "en",
-                        "es-mx",
-                        "es",
-                        "fr",
-                        "ge",
-                        "hu",
-                        "it",
-                        "jp",
-                        "kr",
-                        "pl",
-                        "po",
-                        "ro",
-                        "ru",
-                        "sk",
-                        "tu"
+                        "ru"
                     ],
                     "enumDescriptions": [
-                        "Simplified Chinese",
-                        "Czech",
                         "English",
-                        "Mexican Spanish",
-                        "Spanish",
-                        "French",
-                        "German",
-                        "Hungarian",
-                        "Italian",
-                        "Japanese",
-                        "Korean",
-                        "Polish",
-                        "Portuguese",
-                        "Romanian",
-                        "Russian",
-                        "Slovak",
-                        "Turkish"
+                        "Russian"
                     ]
                 }
             }
         }
     },
     "scripts": {
-        "build-data": "npx tsc buildData.ts && node buildData.js && rm buildData.js",
+        "build-data": "npx tsc buildData.ts && node buildData.js",
         "vscode:prepublish": "npm run package",
         "compile": "npm run build-data && webpack",
         "watch": "npm run build-data && webpack --watch",
@@ -101,5 +71,8 @@
         "typescript": "^5.3.3",
         "webpack": "^5.90.0",
         "webpack-cli": "^5.1.4"
+    },
+    "dependencies": {
+        "vsce": "^2.15.0"
     }
 }
